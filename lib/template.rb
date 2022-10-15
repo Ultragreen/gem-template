@@ -1,6 +1,6 @@
-require "mongem/version"
+require "template/version"
 
-module Mongem
+module Template
   class Error < StandardError; end
   # Your code goes here...
 end

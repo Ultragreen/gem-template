@@ -2,19 +2,18 @@ require "bundler/gem_tasks"
 require "rspec/core/rake_task"
 require "version"
 require 'rake/version_task'
-require "roodi"
-require "roodi_task"
 require 'code_statistics'
 require 'yard'
 require 'yard/rake/yardoc_task.rb'
+require 'rubocop/rake_task'
+
+RuboCop::RakeTask.new
+
+
 Rake::VersionTask.new
 
 RSpec::Core::RakeTask.new(:spec)
 
-RoodiTask.new() do | t |
-    t.patterns = %w(lib/**/*.rb)
-    t.config = "ultragreen_roodi_coding_convention.yml"
-  end
 
 task :default => :spec
 

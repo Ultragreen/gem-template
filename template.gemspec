@@ -1,13 +1,13 @@
 
 Gem::Specification.new do |spec|
-  spec.name          = "mongem"
+  spec.name          = "template"
   spec.version       = `cat VERSION`.chomp
-  spec.authors       = ["Pierre Alphonse", "Camille Paquet"]
-  spec.email         = ["pierre.alphonse@orange.com", "camille.paquet@orange.com"]
+  spec.authors       = ["Pierre Alphonse", "Camille Paquet", "Romain GEORGES"]
+  spec.email         = ["gems@ultragreen.net"]
 
-  spec.summary       = "Webservice endpoint mock provider"
-  spec.description   = "Webservice endpoint mock provider"
-  spec.homepage      = "https://github.com/Ultragreen/MockWS"
+  spec.summary       = "GEM TEMPLATE"
+  spec.description   = "GEM TEMPLATE"
+  spec.homepage      = "https://github.com/Ultragreen/gem-template"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
@@ -22,8 +22,12 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.add_development_dependency 'rake', '~> 12.0'
+  spec.add_development_dependency 'rspec', '~> 3.0'
+  spec.add_development_dependency 'rubocop', '~> 1.32'
   spec.add_development_dependency "roodi", "~> 5.0"
   spec.add_development_dependency 'code_statistics', '~> 0.2.13'
   spec.add_development_dependency "yard", "~> 0.9.27"
   spec.add_development_dependency "yard-rspec", "~> 0.1"
+  spec.add_development_dependency'version', '~> 1.1'
 end

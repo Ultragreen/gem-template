@@ -1,4 +1,4 @@
 require 'version'
-module Mongem
+module Template
   VERSION = Version.current
 end
